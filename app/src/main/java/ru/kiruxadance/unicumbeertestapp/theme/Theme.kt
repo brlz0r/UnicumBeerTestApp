@@ -1,0 +1,32 @@
+package ru.kiruxadance.unicumbeertestapp.theme
+
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.darkColors
+import androidx.compose.material.lightColors
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
+
+private val DarkColorPalette = darkColors(
+    primary = Color.White,
+    background = DarkGray,
+    onBackground = Color.White,
+    surface = LightBlue,
+    onSurface = DarkGray
+)
+
+private val ColorPalette = lightColors(
+    primary = Purple,
+    background = Color.White,
+    surface = LightBlue,
+    onSurface = DarkGray
+)
+
+@Composable
+fun BeerAppTheme(darkTheme: Boolean = true, content: @Composable() () -> Unit) {
+    MaterialTheme(
+        colors = ColorPalette,
+        typography = Typography,
+        shapes = Shapes,
+        content = content
+    )
+}
